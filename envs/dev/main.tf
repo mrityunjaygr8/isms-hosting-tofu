@@ -42,7 +42,7 @@ provider "azurerm" {
 }
 
 module "isms" {
-  cloud_init_file = base64encode(file("${path.module}/../../extra/cloud_init.sh"))
+  cloud_init_file = base64encode(file("${path.module}/../../extra/cloud_init.yaml"))
   location = var.location
   resource_group_name = var.resource_group_name
   source = "${path.module}/../../modules/isms"
